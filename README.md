@@ -1,5 +1,4 @@
-# Handwritten-Chinese-character-recognition-and-intelligent-scoring
-    手写汉字AI智能评分项目
+# Handwritten-Chinese-character-recognition-and-intelligent-scoring(手写汉字AI智能评分项目)
 # 本项目实现了对手写汉字的智能识别和评分功能，目前已申请专利，主要分为三大部分：
 ## 一、图像预处理：
 
