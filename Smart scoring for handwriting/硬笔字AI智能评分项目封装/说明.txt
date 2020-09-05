@@ -1,0 +1,17 @@
+1book_seg.py和2paper_seg.py是执行图片切割任务，输入参数是：图片路径，保存切割图片的文件目录，输出：图片保存到对应文件夹，打印所有的汉字图片路径
+
+3classify_v2.py
+是执行识别任务，输入参数是：freezed.pb文件路径，freezed.label文件路径，切割的汉字图片路径，标准字库的目录，输出：打印一个字典
+（3，4任务可以并行）
+
+4binary.py是阈值分割任务，输入参数是：切割的汉字图片路径，输出：原路径下保存阈值分割后的图片，名字是原输入图片名+“_1”
+
+5retange_word.py是获取汉字最小外接矩形，输入参数：3中输出的字典，输出：分三种情况：1.未识别的汉字，直接打印最终结果 2.是空格，直接打印出最终结果  3.原路径下保存最小外接矩形的图片，名字是原输入图片名+“_2”，打印提示"Retange img has been written as ***_2.jpg in inputdir"
+
+6similary.py是计算图片相似度，输入参数：3中输出的字典(table,path)输出：打印新字典
+#7calulate_num.py统计好字和差字的个数，输入参数：带final的字典，同时在原路径下新建一个txt文档，其路径作为输入 输出：txt文档会更新参数。备注：此步骤需要历遍所有的final字典，这样才能统计
+
+8adptive_threshold.py自动调整好坏字的比例，输入参数：新字典(table,path)， 输出：打印最终结果
+#9two_trans.py输出透明图，输入参数带final__adptive的字典，输出：原路径下保存两种透明图，名字是原输入图片名+“_3”、原输入图片名+“_4”；带final__adptive_1的字典
+
+-i https://pypi.tuna.tsinghua.edu.cn/simple/ https://mirror.tuna.tsinghua.edu.cn/tensorflow/linux/cpu/tensorflow-1.7.0-cp35-cp35m-linux_x86_64.whl
